@@ -15,7 +15,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-
+  
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -99,8 +99,10 @@
         <module>assembly-combined-package</module>
     </modules>
     <properties>
+        <hdp.version>3.1.4.0-315</hdp.version>
         <linkis.version>1.1.1</linkis.version>
-        <hadoop.version>2.7.2</hadoop.version>
+        <hadoop.version>3.3.1</hadoop.version>
+        <hive.version>2.3.9</hive.version>
         <zookeeper.version>3.5.9</zookeeper.version>
         <spring.boot.version>2.3.12.RELEASE</spring.boot.version>
         <guava.version>30.0-jre</guava.version>
@@ -150,6 +152,53 @@
         <jacoco.version>0.8.7</jacoco.version>
         <jacoco.skip>false</jacoco.skip>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>aliyun</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>hortonworks</id>
+            <url>https://nexus-private.hortonworks.com/nexus/content/groups/public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>aliyun-spring</id>
+            <url>https://maven.aliyun.com/repository/spring</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>aliyun-spring-p</id>
+            <url>https://maven.aliyun.com/repository/spring-plugin</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-plugin</id>
+            <url>https://repo.spring.io/plugins-release/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>apache.snapshots.repo</id>
+            <url>https://repository.apache.org/content/groups/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencyManagement>
         <dependencies>
@@ -223,18 +272,6 @@
                 <version>${guava.version}</version>
             </dependency>
             <dependency>
-                <groupId>xml-apis</groupId>
-                <artifactId>xml-apis</artifactId>
-                <version>1.4.01</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-bom</artifactId>
-                <version>${log4j2.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
@@ -246,10 +283,15 @@
             </dependency>
 
             <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>failureaccess</artifactId>
+                <version>1.0.1</version>
+            </dependency>
+
+            <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.connector.version}</version>
-                <scope>test</scope>
             </dependency>
 
             <dependency>

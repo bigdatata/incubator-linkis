@@ -33,6 +33,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.solr.SolrAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.event.ApplicationPreparedEvent;
 import org.springframework.boot.web.embedded.jetty.JettyServerCustomizer;
@@ -66,7 +67,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 
 import java.util.EnumSet;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = { SolrAutoConfiguration.class })
 @EnableDiscoveryClient
 @RefreshScope
 @ComponentScan(
