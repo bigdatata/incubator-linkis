@@ -36,7 +36,9 @@ import org.apache.spark.sql.types.{StructField, StructType}
 
 import scala.collection.JavaConverters._
 
-
+/**
+ *
+ */
 object SparkSQLHistoryParser {
 
   /**

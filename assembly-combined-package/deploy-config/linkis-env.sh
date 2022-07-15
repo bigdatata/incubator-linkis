@@ -148,4 +148,4 @@ LINKIS_PUBLIC_MODULE=lib/linkis-commons/public-module
 #SKYWALKING_AGENT_PATH=/appcom/config/skywalking-agent/skywalking-agent.jar
 
 #If you want to start metadata related microservices, you can set this export ENABLE_METADATA_MANAGE=true
-export ENABLE_METADATA_MANAGER=false
+export ENABLE_METADATA_MANAGER=true
