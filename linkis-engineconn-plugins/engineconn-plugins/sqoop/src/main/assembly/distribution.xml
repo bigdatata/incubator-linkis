@@ -51,18 +51,18 @@
                 <exclude>com.amazonaws:aws-java-sdk-route53:jar</exclude>
                 <exclude>com.amazonaws:aws-java-sdk-sts:jar</exclude>
                 <exclude>com.amazonaws:jmespath-java:jar</exclude>
-                <exclude>com.fasterxml.jackson.core:jackson-annotations:jar</exclude>
-                <exclude>com.fasterxml.jackson.core:jackson-core:jar</exclude>
-                <exclude>com.fasterxml.jackson.core:jackson-databind:jar</exclude>
-                <exclude>com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar</exclude>
-                <exclude>com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar</exclude>
-                <exclude>com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar</exclude>
-                <exclude>com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar</exclude>
-                <exclude>com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar</exclude>
-                <exclude>com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar</exclude>
-                <exclude>com.fasterxml.jackson.module:jackson-module-parameter-names:jar</exclude>
-                <exclude>com.fasterxml.jackson.module:jackson-module-paranamer:jar</exclude>
-                <exclude>com.fasterxml.jackson.module:jackson-module-scala_2.11:jar</exclude>
+<!--                <exclude>com.fasterxml.jackson.core:jackson-annotations:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.core:jackson-core:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.core:jackson-databind:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.module:jackson-module-parameter-names:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.module:jackson-module-paranamer:jar</exclude>-->
+<!--                <exclude>com.fasterxml.jackson.module:jackson-module-scala_2.12:jar</exclude>-->
                 <exclude>com.github.andrewoma.dexx:dexx-collections:jar</exclude>
                 <exclude>com.github.vlsi.compactmap:compactmap:jar</exclude>
                 <exclude>com.google.code.findbugs:annotations:jar</exclude>
