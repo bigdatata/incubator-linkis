@@ -24,12 +24,16 @@ import org.apache.linkis.common.utils.{Logging, RSAUtils, Utils}
 import org.apache.linkis.server.conf.ServerConfiguration
 import org.apache.linkis.server.exception.{IllegalUserTicketException, LoginExpireException, NonLoginException}
 import javax.servlet.http.Cookie
+import org.apache.commons.lang.StringUtils
 import org.apache.commons.lang.time.DateFormatUtils
+
 import scala.collection.JavaConverters._
 
 object SSOUtils extends Logging {
 
   private[security] val USER_TICKET_ID_STRING = ServerConfiguration.LINKIS_SERVER_SESSION_TICKETID_KEY.getValue
+
+  private[security] val DOMAIIN_STRING = ServerConfiguration.LINKIS_SERVER_SESSION_DOMAIN.getValue
 
   private val sessionTimeout = ServerConfiguration.BDP_SERVER_WEB_SESSION_TIMEOUT.getValue.toLong
 
@@ -79,6 +83,7 @@ object SSOUtils extends Logging {
     cookie.setMaxAge(-1)
     if(sslEnable) cookie.setSecure(true)
     cookie.setPath("/")
+    if(StringUtils.isNotBlank(DOMAIIN_STRING)) cookie.setDomain(DOMAIIN_STRING)
     addCookie(cookie)
   }
 
